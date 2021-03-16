@@ -1,0 +1,25 @@
+<html>
+<body>
+	<script>
+
+		var player = {
+			mid: {
+				name: '케빈 데브라이너',
+				team: '멘시티',
+				number: 17,
+				age: 31
+			}
+		};
+
+		test(player);
+
+		const test = (obj) => {
+			const { mid: { name, team, number, age } } = obj;
+			console.log(name);
+			console.log(age);
+			console.log(team);
+		};
+
+	</script>
+</body>
+</html>
