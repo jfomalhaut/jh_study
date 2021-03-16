@@ -1,0 +1,6 @@
+1. webpack.config.js에 대한 설정을 한다 
+-> 어떻게 압축? 
+
+2. index.html => output DOM 설정 
+
+3. 라이브러리 설치 

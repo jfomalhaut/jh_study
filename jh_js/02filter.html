@@ -1,0 +1,20 @@
+<html>
+    <body>
+        <script>
+            var friends = ['철수', '영수', '경수']
+            var results = []
+
+            for (var i = 0; i < friends.length; i++) {
+                if (friends[i] != '영수') {
+                    results.push(friends[i]);
+                }
+            }
+
+            console.log(results);
+
+
+            var result2 = friends.filter(item => item != '영수');
+            
+        </script>
+    </body>
+</html>
