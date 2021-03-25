@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // using for-loop
+        let array1 = [1,2,3,4];
+        let result1 = [];
+
+        for (let i = 0; i < array1.length; i++) {
+            result1.push(array1[i] * 2);
+        }
+
+        console.log(result1);
+
+        // using map 
+        let result2 = array1.map((x) => x * 2);
+
+        console.log(result2);
+
+        // map example 2
+        let array2 = [1,2,3,4,5,6,7,8,9,10];
+
+        let result3 = array2.map((x) => {
+            if (x % 2 == 0) {
+                return 'Even';
+            } else {
+                return 'Odd';
+            }
+        });
+
+        console.log(result3);
+
+        // map example 3
+        let students = [
+            {id : 1, name : 'James'}, 
+            {id : 2, name : 'Lyla'}, 
+            {id : 3, name : 'Noel'},
+            {id : 4, name : 'Liam'}
+        ];
+
+        let result4 = students.map(x => x.name);
+
+        console.log(result4);
+
+        // map example 4 - multiply the elements inside the 2-d array 
+        let numbers = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+        let result5 = numbers.map(arr => arr.map(x => x * 2));        
+
+        console.log(result5);
+
+        // map example 5 - multiply the element by 2 and reverse it 
+        let array3 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        let result6 = array3.map(x => x * 2).reverse();
+
+        console.log(result6);
+
+        // map example 6 - push the index 
+        let array4 = [1, 2, 3, 4, 5];
+        let result7 = array4.map((x, i) => i);
+
+        console.log(result7);
+    </script>
+</body>
+</html>

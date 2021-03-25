@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // example 1
+        let fruits = ['apple', 'grape', 'banana', 'apple', 'orange', 'grape', 'apple', 'orange'];
+        let result = fruits.reduce((obj, curr) => {
+            if (!obj[curr]) {
+                obj[curr] = 0
+            }
+            obj[curr]++;
+
+            return obj
+        }, {});
+
+        console.log(result);
+
+        // example 2
+        let arr = [
+                { id: 1, name: '상품1', price: 1000, qty: 1, date: '2017' },
+                { id: 2, name: '상품2', price: 2000, qty: 2, date: '2017' },
+                { id: 3, name: '상품3', price: 3000, qty: 3, date: '2017' },
+                { id: 4, name: '상품4', price: 4000, qty: 4, date: '2018' },
+                { id: 5, name: '상품5', price: 5000, qty: 5, date: '2018' },
+                { id: 6, name: '상품6', price: 6000, qty: 6, date: '2019' },
+                { id: 7, name: '상품7', price: 7000, qty: 7, date: '2019' },
+                { id: 8, name: '상품8', price: 8000, qty: 8, date: '2020' },
+            ];
+
+        let result2 = arr.reduce((acc, curr) => {
+            acc = {
+                ...acc, 
+                [curr['date']] : !acc[curr.date] ? [curr] : [...acc[curr.date], curr]
+            }
+            return acc
+        }, {});
+
+        console.log(result2)
+
+        let result3 = arr.reduce((acc, curr) => {
+            acc = acc + (curr.price * curr.qty)
+            return acc
+        }, 0);
+
+        console.log(result3);
+
+        let nums = [1,2,3,4,5];
+
+        let result4 = nums.reduce((acc, cur) => {
+            acc = Math.max(acc, cur);
+            return acc
+        }, 0)
+        
+        console.log(result4)
+    </script>
+</body>
+</html>
