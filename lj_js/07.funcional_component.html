@@ -1,0 +1,23 @@
+<html>
+<body>
+	<div id="root"></div>
+	<script>
+		var value = 10;
+		const test = List();
+		var _root = document.getElementById('root');
+		_root.innerHTML = test;
+
+		function List() {
+			return `
+				<div>
+					<Link>List</Link>	
+					<Link>Home</Link>	
+					<main>
+						<h1>List Component, Value : ${value}</h1>
+					</main>
+				</div>
+			`;
+		}
+	</script>
+</body>
+</html>
