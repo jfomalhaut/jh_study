@@ -1,9 +1,9 @@
 import React from 'react';
 
-function list({history, match : {params : { name }}, location}) {
+function List() {
     return (
         <h1> List Component </h1>
     );
 };
 
-export default list;
+export default List;

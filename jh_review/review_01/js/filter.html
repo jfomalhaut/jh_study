@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // using for-loop
+        let array1 = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+        let result = [];
+
+        for (let i = 0; i < array1.length; i++) {
+            if (array1[i].length < 6) {
+                result.push(array1[i]);
+            }
+        }
+
+        console.log(result);
+
+        // using map 
+        let result2 = array1.map((x) => {
+            if (x.length < 6) {
+                return x
+            }
+        });
+
+        console.log(result2); // result2 = ["spray", "limit", "elite", undefined, undefined, undefined];
+        
+        // using filter 
+        let result3 = array1.filter((x) => x.length < 6);
+    
+        console.log(result3);
+
+        // filter example 2 
+        let players = [
+            {team : 'Manchester City', name : 'Kevin De Bruyne'}, 
+            {team : 'Chelsea', name : 'Kai Havertz'}, 
+            {team : 'Manchester United', name : 'Paul Pogba'}, 
+            {team : 'Manchester City', name : 'Ruben Dias'}, 
+            {team : 'Tottenham', name : 'Harry Kane'}, 
+            {team : 'MCFC', name : 'Bernardo Silva'}
+        ];
+
+        let result4 = players.filter(x => x.team == 'Manchester City' || x.team == 'MCFC');
+        console.log(result4);
+
+    </script>
+</body>
+</html>
