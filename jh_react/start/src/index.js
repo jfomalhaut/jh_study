@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDom from "react-dom";
 import App from './App';
-import InputReview from './routers/InputReview';
+import Addr from './routers/Addr';
 
-ReactDom.render(<InputReview />, document.getElementById('root'));
+ReactDom.render(<Addr />, document.getElementById('root'));

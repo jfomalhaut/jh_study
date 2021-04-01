@@ -52,7 +52,7 @@
 
 // export default PhoneBook;
 
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 
 const field = {
     name : '',
@@ -60,10 +60,10 @@ const field = {
     phoneNumber : ''
 }
 
-let infoSave = [];
-
 function PhoneBook() {
-    const[info, setInfo] = useState(field);
+    const userRef = useRef();
+    const [list, setList] = useState([]);
+    const [info, setInfo] = useState(field);
     const {name, age, phoneNumber} = info;
 
 
@@ -76,31 +76,52 @@ function PhoneBook() {
     }
 
     const resetData = () => {
-        setInfo({
-            name : '', 
-            age : '', 
-            phoneNumber : ''
-        });
+        setInfo(field);
     };
 
-    const saveData = () => {
-        
+    const delteData = (itemIdx) => {
+        const newList = list.filter((item, idx) => idx !== itemIdx);
+        setList(newList);
+    }
+
+    const register = (e) => {
+        e.preventDefault();
+
+        const newList = list.concat(info);
+        setList(newList);
+        userRef.current.focus();
     }
 
     useEffect(() =>  {
-        console.log(info);
-    }, [info]);
+        console.log(list);
+    }, [list]);
 
     return (
         <div>
-            <span> Name : </span> <input value={name} name="name" onChange={onChageData}></input><span> {name} </span>
-            <br></br>
-            <span> Phone Number : </span> <input value={phoneNumber} name="phoneNumber" onChange={onChageData}></input><span> {phoneNumber} </span>
-            <br></br>
-            <span> Age : </span><input value={age} name="age" onChange={onChageData}/><span> {age} </span>
-            <br></br>
+            <form onSubmit={register}>
+                <span> Name : </span> <input value={name} name="name" onChange={onChageData} ref={userRef}></input><span> {name} </span>
+                <br></br>
+                <span> Phone Number : </span> <input value={phoneNumber} name="phoneNumber" onChange={onChageData}></input><span> {phoneNumber} </span>
+                <br></br>
+                <span> Age : </span><input value={age} name="age" onChange={onChageData}/><span> {age} </span>
+                <br></br>
+                <article>
+                    <button> Submit </button>
+                </article>
+            </form>
             <button onClick={resetData}> Reset </button>
-            <button onClick={resetData}> Save </button>
+            <ul>
+                {list.map((item, idx) => (
+                    <li key={`PHONEBOOK${idx}`}>
+                        <div> {idx + 1} </div>
+                        <div> {item.name} </div>
+                        <div> {item.age} </div>
+                        <div> {item.phoneNumber} </div>
+
+                        <button onClick={() => delteData(idx)}> Delete </button>
+                    </li>
+                ))}
+            </ul>
         </div>
     )
 }
