@@ -3,5 +3,6 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import Counter from './routers/Counter';
 import Input from './routers/Input';
+import Addr from './routers/Addr';
 
-ReactDOM.render(<Input />, document.getElementById('root'));
+ReactDOM.render(<Addr />, document.getElementById('root'));
