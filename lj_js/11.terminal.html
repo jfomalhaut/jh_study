@@ -1,0 +1,102 @@
+<html>
+<head>
+	<style>
+		body {
+			background: #f0f0f0;
+		}
+		.container {
+			border-radius: 10px;
+			overflow: hidden;
+			width: 990px;
+			margin: 100px auto;
+			box-shadow: 0 0 15px rgba(0, 0, 0, .2)
+		}
+		nav {
+			background: #fff;
+			height: 33px;
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+		}
+		.buttons {
+			width: 33%;
+			display: flex;
+			padding-left: 5px;
+			box-sizing: border-box;
+		}
+		.buttons span {
+			border: none;
+			width: 12px;
+			height: 12px;
+			border-radius: 50%;;
+			margin: 0 5px;
+			cursor: pointer;
+			display: inline-block;
+		}
+		.buttons span:nth-child(1) { background: #fc635e; }
+		.buttons span:nth-child(2) { background: #fec242; }
+		.buttons span:nth-child(3) { background: #35cd4b; }
+		
+		.title {
+			width: 33%;
+			text-align: center;
+			position: relative;
+		}
+		.title:before {
+			content: '';
+			border: 1px solid #6bccf9;
+			width: 3px;
+			height: 8px;
+			position: absolute;
+			left: 60px;
+			bottom: 5px;
+		}
+		main {
+			min-height: 500px;
+			background: #383739;
+			color: white;
+			white-space: pre-line;
+			padding: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<nav>
+			<div class="buttons">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			<span class="title">
+				whoami — node — 100x25
+			</span>
+		</nav>
+		<main>
+			Last updated: Sun August 8 10:00:00
+			David:~ davidyoun$ node
+
+			> David.location
+			'Boston, MA'
+
+			> David.university
+			'Boston College'
+
+			> David.majors
+			[ 'Computer Science', 'Economics']
+
+			> David.expectedGraduation
+			'May 2018'
+
+			> David.interests
+			[ 'coding', 'economics', 'horse-riding', 'travel', 'surfing', 'StarCraft' ]
+
+			> David.resume
+			'David-Resume.pdf'
+
+			> David.email
+			'younsa@bc.edu'
+		</main>
+	</div>
+</body>
+</html>

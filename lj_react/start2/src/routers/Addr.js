@@ -16,14 +16,15 @@ function Addr() {
 		setKeyword2(keyword);
 	};
 
-	const search = () => {
-		Axios.get(`${URL}?confmKey=${API_KEY}&currentPage=${currentPage}&CountPerPage=10&resultType=json&keyword=${keyword2}`).then(res => {
-			const { data: { results: { common: { totalCount }, juso } } } = res;
+	const search = async () => {
+		try {
+			const result = await Axios.get(`${URL}?confmKey=${API_KEY}&currentPage=${currentPage}&CountPerPage=10&resultType=json&keyword=${keyword2}`);
+			const { data: { results: { common: { totalCount }, juso } } } = result;
 			setTotal(totalCount || 0);
 			setList(juso || []);
-		}).catch(error => {
+		} catch (error) {
 			console.log(error);
-		});
+		}
 	};
 
 	const next = () => {

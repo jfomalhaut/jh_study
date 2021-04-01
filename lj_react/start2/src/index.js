@@ -5,4 +5,4 @@ import Counter from './routers/Counter';
 import Input from './routers/Input';
 import Addr from './routers/Addr';
 
-ReactDOM.render(<Addr />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
