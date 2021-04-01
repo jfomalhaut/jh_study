@@ -1,0 +1,27 @@
+<html>
+<body>
+	<ul id="list"></ul>
+	<script>
+		var arr = [
+			{id: 1, name :'name1', age: 'age1'},
+			{id: 2, name :'name2', age: 'age2'},
+			{id: 3, name :'name3', age: 'age3'},
+			{id: 4, name :'name4', age: 'age4'},
+		];
+
+		const html = print(arr);
+
+		console.log(html);
+
+		function print(data) {
+			return data.map(item => (
+				`<li>
+					<div>${item.id}</div>
+					<div>${item.name}</div>
+					<div>${item.age}</div>
+				</li>`
+			));
+		}
+	</script>
+</body>
+</html>
