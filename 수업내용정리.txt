@@ -1,0 +1,9 @@
+1일차
+javascript es6문법, map, filter, concat, reduce, spread문법 등.
+react 환경설정
+
+2일차
+router, 
+useEffect, useState (Hook)
+
+3일차

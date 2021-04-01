@@ -14,12 +14,14 @@ function App() {
 					<Link to="/list">To List</Link>
 				</li>
 			</ul>
-			<Route path="/home">
-				<Home />
-			</Route>
-			<Route path="/list">
-				<List />
-			</Route>
+
+			<Route path="/home" render={(props) => (
+				<Home history={props.history} name={'김지형'} />
+			)}/>
+
+			<Route path="/list/:name" render={(props) => (
+				<List { ...props } />
+			)} />
 		</BrowserRouter>
 	);
 };

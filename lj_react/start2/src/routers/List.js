@@ -1,8 +1,8 @@
 import React from 'react';
 
-function List() {
+function List({ history, match: { params: { name }}, location }) {
 	return (
-		<h1>List Component</h1>
+		<h1>List Component, name is {name}</h1>
 	);
 };
 

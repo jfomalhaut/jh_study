@@ -1,8 +1,17 @@
 import React from 'react';
 
-function Home() {
+function Home({ history }) {
+
+	const goList = () => {
+		history.push('/list/kevin');
+	};
+
 	return (
-		<h1>Home Component</h1>
+		<div>
+			<h1>Home Component</h1>
+			<button onClick={() => goList()}>go List</button>
+			{/* <button onClick={goList}>go List</button> */}
+		</div>
 	);
 };
 
