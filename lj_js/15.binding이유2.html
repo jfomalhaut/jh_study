@@ -1,0 +1,20 @@
+<html>
+<body>
+	<div id="root"></div>
+	<button onclick="increment()">increment</button>
+	<script>
+
+		var qty = 0;
+
+		function increment() {
+			qty++;
+			rendering();
+		}
+
+		function rendering() {
+			document.getElementById('root').innerHTML = qty;
+		}
+
+	</script>
+</body>
+</html>

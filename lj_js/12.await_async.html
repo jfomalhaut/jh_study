@@ -1,0 +1,35 @@
+<html>
+<body>
+	<button onclick="start()">Start</button>
+	<script>
+
+		function getData(payload) {
+			return new Promise((resolve, reject) => {
+				const { username, password } = payload;
+				setTimeout(() => {
+					if (username === 'dlwnssla' && password === 'dlwns123') {
+						resolve(true);
+					} else {
+						reject(false);
+					}
+				}, 2000);
+			});
+		}
+
+		async function start() {
+			const payload = {
+				username: 'dlwnssla',
+				password: 'dlwns1233',
+			};
+			try {
+				const result = await getData(payload);
+				console.log('success');
+			} catch (err) {
+				console.log('failure');
+			}
+		}
+
+
+	</script>
+</body>
+</html>

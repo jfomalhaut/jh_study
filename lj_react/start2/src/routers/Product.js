@@ -28,10 +28,10 @@ function Product({ match: { params: { type } } }) {
 	return (
 		<Container type={type}>
 			<nav>
-				<Link className={type === 'all' ? 'active' : '' } style={{ color: type === 'all' ? 'dodgerblue' : '#666' }} to="/product/all">All</Link>
-				<Link className={type === 'fishes' ? 'active' : '' } style={{ color: type === 'fishes' ? 'dodgerblue' : '#666' }} to="/product/fishes">Fishes</Link>
-				<Link className={type === 'fruit' ? 'active' : '' } style={{ color: type === 'fruit' ? 'dodgerblue' : '#666' }} to="/product/fruit">Fruit</Link>
-				<Link className={type === 'vegetable' ? 'active' : '' } style={{ color: type === 'vegetable' ? 'dodgerblue' : '#666' }} to="/product/vegetable">Vegetable</Link>
+				<Link className={type === 'all' && 'active' } style={{ color: type === 'all' ? 'dodgerblue' : '#666' }} to="/product/all">All</Link>
+				<Link className={type === 'fishes' && 'active' } style={{ color: type === 'fishes' ? 'dodgerblue' : '#666' }} to="/product/fishes">Fishes</Link>
+				<Link className={type === 'fruit' && 'active' } style={{ color: type === 'fruit' ? 'dodgerblue' : '#666' }} to="/product/fruit">Fruit</Link>
+				<Link className={type === 'vegetable' && 'active' } style={{ color: type === 'vegetable' ? 'dodgerblue' : '#666' }} to="/product/vegetable">Vegetable</Link>
 			</nav>
 			<section>
 				{list.map(item => (

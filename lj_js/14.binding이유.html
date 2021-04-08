@@ -1,0 +1,16 @@
+<html>
+<body>
+	<h1 id="qty">0</h1>
+	<button onclick="increment()">increment</button>
+	<script>
+		let qty = 0;
+		const qtyElement = document.querySelector('#qty');
+		
+		function increment() {
+			qty++;
+			qtyElement.innerHTML = qty;
+		}
+
+	</script>
+</body>
+</html>

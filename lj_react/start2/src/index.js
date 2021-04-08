@@ -4,5 +4,6 @@ import App from './App';
 import Counter from './routers/Counter';
 import Input from './routers/Input';
 import Addr from './routers/Addr';
+import Quantity from './routers/Quantity';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<Quantity />, document.getElementById('root'));

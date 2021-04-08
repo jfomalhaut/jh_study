@@ -12,3 +12,14 @@ useState, useEffect
 
 4일차
 Axios, API, juso, prev, next 처리
+
+5일차 (21.04.06)
+Grid-layout, aysnc-await, Product 복습
+Reducer,
+
+6일차 (아직안함)
+redux, saga Middleware, APIs NodeJS(Express)
+
+앞으로
+Immer(실용성)
+TypeScript 새로 세팅

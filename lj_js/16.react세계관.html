@@ -1,0 +1,55 @@
+<html>
+<body>
+	<button onclick="goHome('Home')">Home으로</button>
+	<button onclick="goHome('List')">List으로</button>
+	<button onclick="goHome('Detail')">Detail으로</button>
+	<div id="root"></div>
+	
+	
+	<script>
+		var cartCount = 0;
+		var rootElement = document.getElementById('root');
+
+		function view(page) {
+			rootElement.innerHTML = page;
+		}
+
+		function goHome(page) {
+			switch (page) {
+				case 'Home': {
+					view(Home());
+					break;
+				}
+				case 'List': {
+					view(List());
+					break;
+				}
+				case 'Detail': {
+					view(Detail());
+					break;
+				}
+			}
+		}
+
+		function Home(){
+			return `
+				<h1>Home Component</h1>
+			`;
+		}
+
+		function List(){
+			return `
+				<h1>List Component cart: ${cartCount}</h1>
+			`;
+		}
+
+		function Detail(){
+			return `
+				<h1>Detail Component</h1>
+			`;
+		}
+	
+	
+	</script>
+</body>
+</html>
