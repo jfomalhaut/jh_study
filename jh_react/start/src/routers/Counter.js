@@ -29,7 +29,7 @@ function Counter() {
         else {
             setFee(0);
         }
-    }, [count])
+    }, [count]);
 
     // const detectFive = () => {
     //     if (count == 0) { 
@@ -49,8 +49,6 @@ function Counter() {
     //     }
     // }, [count]);
     
-
-
     return (
         <div>
             <h1> PRICE : <span> {PRICE} </span></h1>
