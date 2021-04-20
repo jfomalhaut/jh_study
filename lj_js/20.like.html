@@ -1,0 +1,14 @@
+<html>
+<body>
+	<button onclick="like('조선일보 기사')">Like!</button>
+	<script>
+
+		function like(article) {
+			const data = { article, time: new Date().getTime()};
+			const result = JSON.stringify(data);
+			// localStorage.setItem('news', result)
+		}
+
+	</script>
+</body>
+</html>

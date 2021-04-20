@@ -1,13 +1,22 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 function Navigator() {
 	const count = useSelector(({ CountReducer }) => CountReducer.count);
+	const cart = useSelector(({ CartReducer }) => CartReducer.cart);
+
+	useEffect(() => {
+		console.log(cart);
+	}, [cart]);
 
 	return (
 		<header>
-			<h1>{count}</h1>
+			{cart.map(item => (
+				<span>{item.name}</span>
+			))}
+			
+			<h1>{cart.length}</h1>
 			<ul>
 				<li>
 					<Link to="/home">Home</Link>

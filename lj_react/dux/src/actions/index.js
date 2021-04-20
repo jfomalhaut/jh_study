@@ -1,5 +1,7 @@
 import CountAction from './CountAction';
+import CartAction from './CartAction';
 
 export {
-	CountAction
+	CartAction,
+	CountAction,
 };
