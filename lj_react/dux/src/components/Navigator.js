@@ -27,6 +27,9 @@ function Navigator() {
 				<li>
 					<Link to="/cart">Cart</Link>
 				</li>
+				<li>
+					<Link to="/login">login</Link>
+				</li>
 			</ul>
 		</header>
 	);
